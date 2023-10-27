@@ -1,0 +1,78 @@
+</head>
+
+<style>
+body
+  {
+     background:url(../图片/282e0d7eaacf9388.jpg);
+    
+     /* background-repeat:no-repeat;*/
+ }
+#box
+  {
+    position:relative;
+    width:300px;
+    height:450px;
+    left:800px;
+  }
+img
+  {
+    position:absolute;
+    /*    定义旋转基点*/
+        transform-origin:left bottom;
+        transition:  1.5s;
+
+      }
+
+#box:hover img:nth-child(1)
+{
+    transform:rotate(-50deg);
+}
+#box:hover img:nth-child(2)
+{
+    transform:rotate(-30deg);
+}
+
+#box:hover img:nth-child(3)
+{
+    transform:rotate(-15deg);
+}
+#box:hover img:nth-child(4)
+{
+    transform:rotate(0deg);
+}
+
+#box:hover img:nth-child(5)
+{
+    transform:rotate(15deg);
+}
+
+#box:hover img:nth-child(6)
+{
+    transform:rotate(30deg);
+}
+
+#box:hover img:nth-child(7)
+{
+    transform:rotate(50deg);
+}
+</style>
+
+<body>
+<div id="box">
+  <img src="../图片/20180619180413-261544618_jpeg_268_
+       376_37553.jpg"width="300px"  height="400px" >
+  <img src="../图片/QQ图片20190702183914.jpg"
+width="300px"height="400px" >
+  <img src="../图片/57f9a8e6f1ed4.jpg"width="300px"
+height="400px" >
+    <img src="../图片/QQ图片20190702183936.jpg"
+width="300px"height="450px" >
+<img src="../图片/img-36c60f22c63f7b7178f456aea8911180.jpg"
+width="300px"height="450px" >
+<img src="../图片/282e0d7eaacf9388.jpg"width="300px"
+height="450px" >
+<img src="../图片/img-3394799a828d4ecc929c98fb239570e8.jpg"
+width="300px"height="450px" >
+</div>
+</body>
+</html>
