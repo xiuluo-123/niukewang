@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--兼容移动设备-->
+<meta					name="viewport"
+ content="initial-scale=1.0,user-scalable=no"/>
+<title>hello world</title>
+</head>
+<!--初始化容器大小，将所有容器放大到最大-->
+<style type="text/css">
+html{height:100%}
+body{height:100%;margin:0px;padding:0px}
+#container{height:100%}
+</style>
+<!--引入百度地图api接口 (需要申请应用后的秘钥) -->
+<script				type="text/javascript"
+src="http://api.map.baidu.com/api?v=3.0&ak=s5Fv6ew
+FWWqdUnz1l2vZNGbpl2MxmFKV"></script>
+
+<body>
+<!--创建显示地图界面的容器-->
+<div id="container">
+
+</div>
+
+<script>
+//创建地图实例
+var map = new BMap.Map("container");
+//设置中心点坐标 （地图初始化的位置）
+var point = new BMap.Point(116.404,39.915);
+//地图初始化， 同时设置展示级别
+map.centerAndZoom(point, 15);
+//地图配置与操作
+//定义浏览器初始化后n毫秒后的操作
+var map = new BMap.Map("container");
+var point = new BMap.Point(116.404,39.915);
+map.centerAndZoom(poimt, 15);
+window.setTimeout(funtion(){
+  map.panTo(new BMap.Point(108.985571,34.161882));
+//第一个控件， 开启滚轮缩放
+map.enableScrollWheelZoom(true);
+//平移缩放空间
+map.addControl(new BMap.NavigationControl());
+//添加比例尺
+map.addControl(new BMap.ScaleControl());
+//缩略图
+map.addControl(new BMap.OverviewMapControl());
+//卫星、三维
+map.addControl(new BMap.MapTypeControl());
+},2000);
+
+//自定义控件--funtion
+funtion ZoomControl(){
+  //设置默认停靠位置和偏移量
+this.defaultAnchor = BMAP_ANCHOR_TOP_LEFT;
+this.defaultOffset = new BMap.Size(10, 10);
+}
+//通过javaScript的prototype属性继承于BMap.Control
+ZoomControl.prototype = new BMap.Control();
+
+</script>
+</body>
+</html>

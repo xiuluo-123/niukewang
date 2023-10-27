@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>动画</title>
+</head>
+
+  /*<link rel="stylesheet" href="">引用动画*/
+
+<style>
+
+  /*定义div初始状态*/
+.box
+{
+width:200px;
+height:200px;
+background:#1C8581;
+marign:10px auto;
+-webkit-animation:hover 1s ease-in infinite;
+}
+/*当触发某个操作室触发的功能函数*/
+.box :hover
+{
+ /*间隔快慢、 时间定义、 是否重复*/
+    -webkit-animatiion:hover 1s ease-in infinite;
+}
+
+@-moz-keyframes hover
+
+{
+
+  -webkit-animatiion:hover 1s ease-in infinite;
+}
+
+@-webkit-keyframes hover
+{
+  0%{width: 200px;height: 200px;border-radius: 50%;}
+  50%{width: 300px;height: 300px;border-radius: 50%;}
+  100%{width: 200px;height: 200px;border-radius: 50%}
+}
+
+</style>
+<body>
+  <div class="box">
+  </div>
+</body>
+</html>
